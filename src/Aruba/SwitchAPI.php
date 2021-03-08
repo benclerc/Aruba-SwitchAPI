@@ -484,7 +484,8 @@ class SwitchAPI {
 	*	@param array $vlans [VLAN ids].
 	*	@param string $port Port id.
 	*	@return bool Return the TRUE if successful, FALSE if it failed.
-	*	@link Working but be careful ongoing forum post about not being able to remove tagged vlan if it's the default vlan (1). More info : https://community.arubanetworks.com/t5/Wired-Intelligent-Edge-Campus/Removing-default-VLAN-from-REST-not-working/td-p/674880
+	*	Working but be careful ongoing forum post about not being able to remove tagged vlan if it's the default vlan (1). More info : 
+	*	@link https://community.arubanetworks.com/t5/Wired-Intelligent-Edge-Campus/Removing-default-VLAN-from-REST-not-working/td-p/674880
 	*/
 	public function setTVlanPort(array $vlans, string $port) : bool {
 		// Get the current configuration
@@ -568,7 +569,7 @@ class SwitchAPI {
 
 	/**
 	*	Get all ports status.
-	*	@return array Return an array like [1=>['up'=>TRUE, 'enable'=>TRUE], 2=>['up'=>FALSE, 'enable'=>TRUE], ...].
+	*	@return array Return an array of objects.
 	*/
 	public function getPortsStatus() : array {
 		// Check if port info exists in cache, else request the information
