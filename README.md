@@ -17,6 +17,7 @@ You can find all supported methods on [Aruba website](https://h10145.www1.hpe.co
    * [Documentation](#documentation)
       * [Config class](#config-class)
       * [SwitchAPI class](#switchapi-class)
+         * [Usage](#usage)
          * [Available methods](#available-methods)
 <!--te-->
 
