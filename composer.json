@@ -1,0 +1,24 @@
+{
+    "name": "benclerc/aruba-switchapi",
+    "description": "Library used for interacting with Aruba SwitchAPI (ArubaOS).",
+    "homepage": "https://github.com/benclerc/Aruba-SwitchAPI",
+    "license": "MIT",
+    "type": "Library",
+    "authors": [
+        {
+            "name": "Benjamin Clerc",
+            "email": "contact@benjamin-clerc.com",
+            "homepage": "https://benjamin-clerc.com",
+            "role": "Creator/Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aruba\\": "src/Aruba/"
+        }
+    }
+}
