@@ -151,7 +151,7 @@ class SwitchAPI {
 
 	/**
 	*	Turn on or off the locator LED. If no duration is set, default to 30 minutes.
-	*	@param int $mode 1 : blink mode, 2 : on, 3 : off.
+	*	@param int $mode 0 : off, 1 : on, 2 : blink.
 	*	@param int $duration Duration of the mode wanted in minutes.
 	*	@return Return the configuration if successful, FALSE if it failed.
 	*/
