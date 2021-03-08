@@ -122,7 +122,7 @@ class SwitchAPI {
 	*	@param string $command A Aruba OS valid CLI command.
 	*	@return mixed Return decoded response if success or FALSE on fail.
 	*/
-	private function cli(string $command) {
+	public function cli(string $command) {
 		// Create and fill data object
 		$data = new stdClass();
 		$data->cmd = $command;
@@ -614,7 +614,7 @@ class SwitchAPI {
 	*	@param string $port Port id.
 	*	@return bool Return the TRUE if successful, FALSE if it failed.
 	*/
-	private function enablePort(string $port) : bool {
+	public function enablePort(string $port) : bool {
 		// Create and fill data object
 		$data = new stdClass();
 		$data->id = "$port";
@@ -640,7 +640,7 @@ class SwitchAPI {
 	*	@param string $port Port id.
 	*	@return bool Return the TRUE if successful, FALSE if it failed.
 	*/
-	private function disablePort(string $port) : bool {
+	public function disablePort(string $port) : bool {
 		// Create and fill data object
 		$data = new stdClass();
 		$data->id = "$port";
@@ -807,7 +807,7 @@ class SwitchAPI {
 	*	@param string $port Port id.
 	*	@return bool Return the TRUE if successful, FALSE if it failed.
 	*/
-	private function enablePoePort(string $port) : bool {
+	public function enablePoePort(string $port) : bool {
 		// Create and fill data object
 		$data = new stdClass();
 		$data->port_id = "$port";
@@ -830,7 +830,7 @@ class SwitchAPI {
 	*	@param string $port Port id.
 	*	@return bool Return the TRUE if successful, FALSE if it failed.
 	*/
-	private function disablePoePort(string $port) : bool {
+	public function disablePoePort(string $port) : bool {
 		// Create and fill data object
 		$data = new stdClass();
 		$data->port_id = "$port";
