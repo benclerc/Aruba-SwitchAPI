@@ -117,14 +117,7 @@ class Config {
 	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
 	*/
 	public function setSSLVerifyHost(bool $verifySSLHost) {
-		switch ($verifySSLHost) {
-			case TRUE:
-				$this->SSLVerifyHost = 2;
-				break;
-			case FALSE:
-				$this->SSLVerifyHost = 0;
-				break;
-		}
+		$this->SSLVerifyHost = ($verifySSLHost) ? 2 : 0;
 		return $this;
 	}
 
