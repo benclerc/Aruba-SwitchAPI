@@ -429,7 +429,7 @@ class SwitchAPI {
 	*	Set untagged VLAN on port.
 	*	@param int $vlan VLAN id.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function setUVlanPort(int $vlan, string $port) : bool {
 		// Get the current configuration
@@ -481,11 +481,12 @@ class SwitchAPI {
 
 	/**
 	*	Set tagged VLAN(s) on port.
+	*
+	*	Working but be careful ongoing forum post about not being able to remove tagged vlan if it's the default vlan (1). More info [on this forum post](https://community.arubanetworks.com/t5/Wired-Intelligent-Edge-Campus/Removing-default-VLAN-from-REST-not-working/td-p/674880).
+	*
 	*	@param array $vlans [VLAN ids].
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
-	*	Working but be careful ongoing forum post about not being able to remove tagged vlan if it's the default vlan (1). More info : 
-	*	@link https://community.arubanetworks.com/t5/Wired-Intelligent-Edge-Campus/Removing-default-VLAN-from-REST-not-working/td-p/674880
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function setTVlanPort(array $vlans, string $port) : bool {
 		// Get the current configuration
@@ -613,7 +614,7 @@ class SwitchAPI {
 	/**
 	*	Enable a port.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function enablePort(string $port) : bool {
 		// Create and fill data object
@@ -639,7 +640,7 @@ class SwitchAPI {
 	/**
 	*	Disable a port.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function disablePort(string $port) : bool {
 		// Create and fill data object
@@ -665,7 +666,7 @@ class SwitchAPI {
 	/**
 	*	Disable a port 5sec and re-enable it. Be careful when disabling links between switchs or firewalls ...
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function restartPort(string $port) : bool {
 		// Disable
@@ -767,11 +768,14 @@ class SwitchAPI {
 
 	/**
 	*	Get all ports POE status.
+	*
+	*	Values of port_poe_stats can be :
+	*	* If POE is disable : PPDS_DISABLE.
+	*	* If POE is enable but not delivering : PPDS_SEARCHING.
+	*	* If POE is enable and delivering : PPDS_DELIVERING.
+	*	* If POE has problem or is failing : PPDS_FAULT, PPDS_TEST, PPDS_OTHER_FAULT.
+	*
 	*	@return array Return an array of objects. Values of port_poe_stats can be :
-	*	- If POE is disable : PPDS_DISABLE.
-	*	- If POE is enable but not delivering : PPDS_SEARCHING.
-	*	- If POE is enable and delivering : PPDS_DELIVERING.
-	*	- If POE has problem or is failing : PPDS_FAULT, PPDS_TEST, PPDS_OTHER_FAULT.
 	*/
 	public function getPortsPOEStatus() : array {
 		// Check if port info exists in cache, else request the information
@@ -790,12 +794,15 @@ class SwitchAPI {
 
 	/**
 	*	Check if a port is POE enabled.
+	*
+	*	Values of port_poe_stats can be :
+	*	* If POE is disable : PPDS_DISABLE.
+	*	* If POE is enable but not delivering : PPDS_SEARCHING.
+	*	* If POE is enable and delivering : PPDS_DELIVERING.
+	*	* If POE has problem or is failing : PPDS_FAULT, PPDS_TEST, PPDS_OTHER_FAULT.
+	*
 	*	@param string $port Port id.
-	*	@return Return the object. Values of port_poe_stats can be :
-	*	- If POE is disable : PPDS_DISABLE.
-	*	- If POE is enable but not delivering : PPDS_SEARCHING.
-	*	- If POE is enable and delivering : PPDS_DELIVERING.
-	*	- If POE has problem or is failing : PPDS_FAULT, PPDS_TEST, PPDS_OTHER_FAULT.
+	*	@return Return the object.
 	*/
 	public function portPoeStatus(string $port) {
 		// Send request
@@ -806,7 +813,7 @@ class SwitchAPI {
 	/**
 	*	Enable POE on a port.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function enablePoePort(string $port) : bool {
 		// Create and fill data object
@@ -829,7 +836,7 @@ class SwitchAPI {
 	/**
 	*	Disable POE on a port.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function disablePoePort(string $port) : bool {
 		// Create and fill data object
@@ -852,7 +859,7 @@ class SwitchAPI {
 	/**
 	*	Restart POE on a port.
 	*	@param string $port Port id.
-	*	@return bool Return the TRUE if successful, FALSE if it failed.
+	*	@return bool Return TRUE if successful, FALSE if it failed.
 	*/
 	public function restartPoePort(string $port) : bool {
 		// Disable
