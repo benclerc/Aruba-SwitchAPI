@@ -8,7 +8,7 @@ Aruba SwitchAPI is a PHP library for requesting Aruba switches (ArubaOS). This l
 
 **Warning** : This library is incomplete and mainly oriented towards POE, VLAN, port and LED locator. Contributions are welcome !
 
-You can find all supported methods on [Aruba website](https://h10145.www1.hpe.com/Downloads/ProductsList.aspx), choose your equipment and download the API documentation.
+You can find all supported methods on [Aruba's website](https://h10145.www1.hpe.com/Downloads/ProductsList.aspx), choose your equipment and download the API documentation.
 
 ## Table of contents
 
@@ -44,9 +44,9 @@ This Config class is used to prepare the mandatory configuration information to 
 
 Optional parameters :
 
-* CURL timeout : 5000ms. Use `setTimeout()` to change.
-* CURL SSL verify peer option : TRUE. Use `setSSLVerifyPeer()` to change.
-* CURL SSL verify host option : 2. Use `setSSLVerifyHost()` to change.
+* Timeout : 5000ms. Use `setTimeout()` to change.
+* SSL verify peer option : TRUE. Use `setSSLVerifyPeer()` to change.
+* SSL verify host option : 2. Use `setSSLVerifyHost()` to change.
 * API version : 'v7'. Use `setAPIVersion()` to change (only >= v7 are supported).
 
 Example :
