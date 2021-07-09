@@ -713,7 +713,7 @@ class SwitchAPI {
 
 	/**
 	*	Get infos about a MAC address.
-	*	@param $mac = MAC address format 123456-789abc.
+	*	@param string $mac MAC address format 123456-789abc.
 	*	@return mixed Return the object if successful, FALSE if it failed.
 	*/
 	public function getMacAddressInfo($mac) {
@@ -946,21 +946,54 @@ class SwitchAPI {
 	/**
 	*	Retrieve an ARP table entry from an IP.
 	*	@param string $ip IPv4 address.
-	*	@return array Return an Arp Table Entry as an object.
+	*	@return array Return an Arp Table Entry as an object on success or FALSE on failure.
 	*/
-	public function getArpEntryFromIP(string $ip) : stdClass {
+	public function getArpEntryFromIP(string $ip) {
 		// Check passed IP
 		if (!filter_var($ip, FILTER_VALIDATE_IP)) {
 			throw new Exception('getArpEntryFromIP() : The passed IP is invalid.');
 		}
+		
+		// Send request in try catch to catch curlrequest's possible 404 error if IP is unknown
+		try {
+			// Retrieve info
+			$res = $this->curlRequest('GET', '/arp-table/'.$ip);
 
-		// Retrieve info
-		$res = $this->curlRequest('GET', '/arp-table/'.$ip);
+			// Check if the everything went well and return
+			if (isset($res->uri)) {
+				return $res;
+			} else {
+				return FALSE;
+			}
+		} catch (Exception $e) {
+			return FALSE;
+		}
+	}
 
-		// Check if the everything went well and return
-		if (isset($res->uri)) {
-			return $res;
-		} else {
+
+	/**
+	*	Retrieve an ARP table entry from a MAC address.
+	*	@param string $mac MAC address format 123456-789abc.
+	*	@return array Return an Arp Table Entry as an object on success or FALSE on failure.
+	*/
+	public function getArpEntryFromMAC(string $mac) {
+		// Check passed MAC
+		if (strlen($mac) != 13 || substr($mac, 6, 1) != '-') {
+			throw new Exception('getArpEntryFromIP() : The passed MAC is invalid. The MAC address format required is : 123456-789abc.');
+		}
+
+		// Send request in try catch to catch curlrequest's possible 404 error if MAC is unknown
+		try {
+			// Retrieve info
+			$res = $this->curlRequest('GET', '/arp-table/mac-address/'.$mac);
+
+			// Check if the everything went well and return
+			if (isset($res->arp_table_entry_element)) {
+				return $res->arp_table_entry_element;
+			} else {
+				return FALSE;
+			}
+		} catch (Exception $e) {
 			return FALSE;
 		}
 	}
