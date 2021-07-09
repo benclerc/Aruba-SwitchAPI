@@ -926,7 +926,7 @@ class SwitchAPI {
 
 	/**
 	*	Retrieve ARP table (capped to 1K entries right now).
-	*	@return array Return an array of objects.
+	*	@return array Return an array of Arp Table Entries as objects.
 	*/
 	public function getArpTable() : array {
 		// Check if ARP table exists in cache, else request the information
@@ -986,6 +986,29 @@ class SwitchAPI {
 		try {
 			// Retrieve info
 			$res = $this->curlRequest('GET', '/arp-table/mac-address/'.$mac);
+
+			// Check if the everything went well and return
+			if (isset($res->arp_table_entry_element)) {
+				return $res->arp_table_entry_element;
+			} else {
+				return FALSE;
+			}
+		} catch (Exception $e) {
+			return FALSE;
+		}
+	}
+
+
+	/**
+	*	Retrieve an ARP table entry from a VLAN.
+	*	@param string $vlan VLAN ID.
+	*	@return array Return an array of Arp Table Entries as objects.
+	*/
+	public function getArpEntryFromVLAN(int $vlan) {
+		// Send request in try catch to catch curlrequest's possible 404 error if VLAN is unknown
+		try {
+			// Retrieve info
+			$res = $this->curlRequest('GET', '/arp-table/vlan/'.$vlan);
 
 			// Check if the everything went well and return
 			if (isset($res->arp_table_entry_element)) {

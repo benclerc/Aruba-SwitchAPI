@@ -148,6 +148,7 @@ try {
 * [enablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_enablePort) : Enable a port.
 * [getArpEntryFromIP()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromIP) : Retrieve an ARP table entry from an IP.
 * [getArpEntryFromMAC()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromMAC) : Retrieve an ARP table entry from a MAC address.
+* [getArpEntryFromVLAN()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromVLAN) : Retrieve an ARP table entry from a VLAN.
 * [getArpTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpTable) : Retrieve ARP table (capped to 1K entries right now).
 * [getMacAddressInfo()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacAddressInfo) : Get infos about a MAC address.
 * [getMacTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacTable) : Get MAC table of the switch.

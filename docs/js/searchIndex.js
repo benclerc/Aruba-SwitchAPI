@@ -281,6 +281,11 @@ Search.appendIndex(
             "summary": "Retrieve\u0020an\u0020ARP\u0020table\u0020entry\u0020from\u0020a\u0020MAC\u0020address.",
             "url": "classes/Aruba-SwitchAPI.html#method_getArpEntryFromMAC"
         },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetArpEntryFromVLAN\u0028\u0029",
+            "name": "getArpEntryFromVLAN",
+            "summary": "Retrieve\u0020an\u0020ARP\u0020table\u0020entry\u0020from\u0020a\u0020VLAN.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getArpEntryFromVLAN"
+        },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Alogout\u0028\u0029",
             "name": "logout",
             "summary": "Logout",
