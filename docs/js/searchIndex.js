@@ -266,6 +266,11 @@ Search.appendIndex(
             "summary": "Ping\u0020an\u0020IP\u0020or\u0020a\u0020hostname.",
             "url": "classes/Aruba-SwitchAPI.html#method_ping"
         },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetArpTable\u0028\u0029",
+            "name": "getArpTable",
+            "summary": "Retrieve\u0020ARP\u0020table\u0020\u0028capped\u0020to\u00201K\u0020entries\u0020right\u0020now\u0029.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getArpTable"
+        },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Alogout\u0028\u0029",
             "name": "logout",
             "summary": "Logout",

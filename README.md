@@ -146,6 +146,7 @@ try {
 * [disablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_disablePort) : Disable a port.
 * [enablePoePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_enablePoePort) : Enable POE on a port.
 * [enablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_enablePort) : Enable a port.
+* [getArpTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpTable) : Retrieve ARP table (capped to 1K entries right now).
 * [getMacAddressInfo()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacAddressInfo) : Get infos about a MAC address.
 * [getMacTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacTable) : Get MAC table of the switch.
 * [getMacTablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacTablePort) : Get MAC table of a port.

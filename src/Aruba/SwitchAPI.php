@@ -775,7 +775,7 @@ class SwitchAPI {
 	*	* If POE is enable and delivering : PPDS_DELIVERING.
 	*	* If POE has problem or is failing : PPDS_FAULT, PPDS_TEST, PPDS_OTHER_FAULT.
 	*
-	*	@return array Return an array of objects. Values of port_poe_stats can be :
+	*	@return array Return an array of objects.
 	*/
 	public function getPortsPOEStatus() : array {
 		// Check if port info exists in cache, else request the information
@@ -921,6 +921,25 @@ class SwitchAPI {
 		} else {
 			return FALSE;
 		}
+	}
+
+
+	/**
+	*	Retrieve ARP table (capped to 1K entries right now).
+	*	@return array Return an array of objects.
+	*/
+	public function getArpTable() : array {
+		// Check if ARP table exists in cache, else request the information
+		if (!empty($this->cache['getArpTable'])) {
+			$res = $this->cache['getArpTable'];
+		} else {
+			// Send request
+			$res = $this->curlRequest('GET', '/arp-table');
+			$this->cache['getArpTable'] = $res;
+		}
+
+		// Return result
+		return $res->arp_table_entry_element;
 	}
 
 
