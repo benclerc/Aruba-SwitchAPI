@@ -261,6 +261,11 @@ Search.appendIndex(
             "summary": "Restart\u0020POE\u0020on\u0020a\u0020port.",
             "url": "classes/Aruba-SwitchAPI.html#method_restartPoePort"
         },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Aping\u0028\u0029",
+            "name": "ping",
+            "summary": "Ping\u0020and\u0020IP\u0020or\u0020a\u0020hostname.",
+            "url": "classes/Aruba-SwitchAPI.html#method_ping"
+        },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Alogout\u0028\u0029",
             "name": "logout",
             "summary": "Logout",

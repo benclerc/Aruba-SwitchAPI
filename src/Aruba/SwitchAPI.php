@@ -881,6 +881,50 @@ class SwitchAPI {
 
 
 	/**
+	*	IP RELATED FUNCTIONS
+	*/
+
+
+	/**
+	*	Ping and IP or a hostname.
+	*	@param string $target IPv4, IPv6 or hostname.
+	*	@param int $timeout ICMP timeout.
+	*	@return mixed Return an object with "result" (enum 0 -> 10) and "rtt_in_milliseconds" (integer) if successful, FALSE if it failed.
+	*/
+	public function ping(string $target, int $timeout = NULL) {
+		// Destination must be formatted as a Network Host object
+		$networkHost = new stdClass();
+		// If IP, fill Network Host ip_address property with IpAddress object else just the hostname property
+		if (filter_var($target, FILTER_VALIDATE_IP)) {
+			$ipAddress = new stdClass();
+			$ipAddress->version = (filter_var($target, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) ? 'IAV_IP_V4' : 'IAV_IP_V6';
+			$ipAddress->octets = $target;
+			
+			$networkHost->ip_address = $ipAddress;
+		} else {
+			$networkHost->hostname = $target;
+		}
+
+		// Create and fill main data object
+		$data = new stdClass();
+		$data->destination = $networkHost;
+		if (!empty($timeout)) {
+			$data->timeout_in_seconds = $timeout;
+		}
+
+		// Send request
+		$res = $this->curlRequest('POST', '/ping', json_encode($data));
+
+		// Check if the everything went well and return
+		if (isset($res->result)) {
+			return $res;
+		} else {
+			return FALSE;
+		}
+	}
+
+
+	/**
 	*	Logout
 	*/
 	private function logout() {
