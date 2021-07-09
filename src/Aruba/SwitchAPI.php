@@ -886,7 +886,7 @@ class SwitchAPI {
 
 
 	/**
-	*	Ping and IP or a hostname.
+	*	Ping an IP or a hostname.
 	*	@param string $target IPv4, IPv6 or hostname.
 	*	@param int $timeout ICMP timeout.
 	*	@return mixed Return an object with "result" (enum 0 -> 10) and "rtt_in_milliseconds" (integer) if successful, FALSE if it failed.
@@ -899,7 +899,7 @@ class SwitchAPI {
 			$ipAddress = new stdClass();
 			$ipAddress->version = (filter_var($target, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) ? 'IAV_IP_V4' : 'IAV_IP_V6';
 			$ipAddress->octets = $target;
-			
+
 			$networkHost->ip_address = $ipAddress;
 		} else {
 			$networkHost->hostname = $target;

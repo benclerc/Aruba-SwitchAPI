@@ -263,7 +263,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Aping\u0028\u0029",
             "name": "ping",
-            "summary": "Ping\u0020and\u0020IP\u0020or\u0020a\u0020hostname.",
+            "summary": "Ping\u0020an\u0020IP\u0020or\u0020a\u0020hostname.",
             "url": "classes/Aruba-SwitchAPI.html#method_ping"
         },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003Alogout\u0028\u0029",

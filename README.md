@@ -160,6 +160,7 @@ try {
 * [getVlansPorts()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getVlansPorts) : Get list of vlans/ports association.
 * [isPortEnabled()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_isPortEnabled) : Check if a port is enabled.
 * [isPortUp()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_isPortUp) : Check if a port is up.
+* [ping()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_ping) : Ping an IP or a hostname.
 * [portPoeStatus()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_portPoeStatus) : Check if a port is POE enabled.
 * [restartPoePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_restartPoePort) : Restart POE on a port.
 * [restartPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_restartPort) : Disable a port 5sec and re-enable it.
