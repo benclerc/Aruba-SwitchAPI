@@ -944,6 +944,29 @@ class SwitchAPI {
 
 
 	/**
+	*	Retrieve an ARP table entry from an IP.
+	*	@param string $ip IPv4 address.
+	*	@return array Return an Arp Table Entry as an object.
+	*/
+	public function getArpEntryFromIP(string $ip) : stdClass {
+		// Check passed IP
+		if (!filter_var($ip, FILTER_VALIDATE_IP)) {
+			throw new Exception('getArpEntryFromIP() : The passed IP is invalid.');
+		}
+
+		// Retrieve info
+		$res = $this->curlRequest('GET', '/arp-table/'.$ip);
+
+		// Check if the everything went well and return
+		if (isset($res->uri)) {
+			return $res;
+		} else {
+			return FALSE;
+		}
+	}
+
+
+	/**
 	*	Logout
 	*/
 	private function logout() {

@@ -234,6 +234,13 @@
 <dd>Enable a port.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Aruba-SwitchAPI.html#method_getArpEntryFromIP">getArpEntryFromIP()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Retrieve an ARP table entry from an IP.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Aruba-SwitchAPI.html#method_getArpTable">getArpTable()</a>
     <span>
                         &nbsp;: array&lt;string|int, mixed&gt;    </span>
@@ -672,7 +679,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">958</span>
+    <span class="phpdocumentor-element-found-in__line">981</span>
 </aside>
 
         <p class="phpdocumentor-summary">Destructor takes care of logout</p>
@@ -1083,6 +1090,53 @@
     <span class="phpdocumentor-signature__response_type">bool</span>
             &mdash;
             <section class="phpdocumentor-description"><p>Return TRUE if successful, FALSE if it failed.</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getArpEntryFromIP">
+        getArpEntryFromIP()
+        <a href="classes/Aruba-SwitchAPI.html#method_getArpEntryFromIP" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">951</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Retrieve an ARP table entry from an IP.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getArpEntryFromIP</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$ip</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$ip</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>IPv4 address.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>Return an Arp Table Entry as an object.</p>
 </section>
 
     
@@ -2209,7 +2263,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">949</span>
+    <span class="phpdocumentor-element-found-in__line">972</span>
 </aside>
 
         <p class="phpdocumentor-summary">Logout</p>
