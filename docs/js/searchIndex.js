@@ -136,10 +136,25 @@ Search.appendIndex(
             "summary": "Turn\u0020on\u0020or\u0020off\u0020the\u0020locator\u0020LED.\u0020If\u0020no\u0020duration\u0020is\u0020set,\u0020default\u0020to\u002030\u0020minutes.",
             "url": "classes/Aruba-SwitchAPI.html#method_blinkLedLocator"
         },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AisStack\u0028\u0029",
+            "name": "isStack",
+            "summary": "Is\u0020the\u0020switch\u0020a\u0020stacked\u0020switches\u0020\u003F",
+            "url": "classes/Aruba-SwitchAPI.html#method_isStack"
+        },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetSystemStatus\u0028\u0029",
             "name": "getSystemStatus",
-            "summary": "Get\u0020switch\u0027s\u0020system\u0020status\u0020\u0028model,\u0020SN,\u0020firmware\u0020version,\u0020...\u0029.",
+            "summary": "Get\u0020switch\u0027s\u0020system\u0020status\u0020\u0028model,\u0020SN,\u0020firmware\u0020version,\u0020...\u0029.\u0020Works\u0020only\u0020for\u0020standalone\u0020switchs.",
             "url": "classes/Aruba-SwitchAPI.html#method_getSystemStatus"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetStackGlobalSystemStatus\u0028\u0029",
+            "name": "getStackGlobalSystemStatus",
+            "summary": "Get\u0020switch\u0027s\u0020system\u0020status\u0020\u0028firmware\u0020version,\u0020base\u0020address\u0020MAC,\u0020...\u0029.\u0020Works\u0020only\u0020for\u0020stacked\u0020switchs.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getStackGlobalSystemStatus"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetStackMemberSystemStatus\u0028\u0029",
+            "name": "getStackMemberSystemStatus",
+            "summary": "Get\u0020switch\u0027s\u0020system\u0020status\u0020\u0028model,\u0020SN,\u0020...\u0029.\u0020Works\u0020only\u0020for\u0020stacked\u0020switchs.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getStackMemberSystemStatus"
         },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetVlansPorts\u0028\u0029",
             "name": "getVlansPorts",

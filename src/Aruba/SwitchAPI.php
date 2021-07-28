@@ -188,11 +188,63 @@ class SwitchAPI {
 
 
 	/**
-	*	Get switch's system status (model, SN, firmware version, ...).
-	*	@return array Return SystemInfoStats object.
+	*	Is the switch a stacked switches ?
+	*	@return bool Returns TRUE if switch is stacked switches, else FALSE.
+	*/
+	public function isStack() : bool {
+		// Retrieve information about the switch
+		$res = $this->curlRequest('GET', '/system/status/switch');
+
+		// Check waited parameters are here and return result
+		if (!empty($res->switch_type)) {
+			switch ($res->switch_type) {
+				case 'ST_STANDALONE':
+					return FALSE;
+					break;
+				case 'ST_STACKED':
+					return TRUE;
+					break;
+				default:
+					throw new Exception('isStack() : Returned value is unknown.');
+					break;
+			}
+		} else {
+			throw new Exception('isStack() : Unable to retrieve information about the switch.');
+		}
+	}
+
+
+	/**
+	*	Get switch's system status (model, SN, firmware version, ...). Works only for standalone switchs.
+	*	@return array Returns the status of the host system for standalone switches as SystemInfoStats object.
 	*/
 	public function getSystemStatus() : stdClass {
 		return $this->curlRequest('GET', '/system/status');
+	}
+
+
+	/**
+	*	Get switch's system status (firmware version, base address MAC, ...). Works only for stacked switchs.
+	*	@return array Returns the global system information for stacked switches as StackSystemInfoStatsGlobal object.
+	*/
+	public function getStackGlobalSystemStatus() : stdClass {
+		return $this->curlRequest('GET', '/system/status/global_info');
+	}
+
+
+	/**
+	*	Get switch's system status (model, SN, ...). Works only for stacked switchs.
+	*	@return array Returns the list of member specific system information as SystemInfoStats objects for stacked switches or FALSE on failure.
+	*/
+	public function getStackMemberSystemStatus() {
+		$res = $this->curlRequest('GET', '/system/status/members');
+
+		// Check waited parameters are here and return result
+		if (isset($res->system_stats_element) && is_array($res->system_stats_element)) {
+			return $res->system_stats_element;
+		} else {
+			return FALSE;
+		}
 	}
 
 
