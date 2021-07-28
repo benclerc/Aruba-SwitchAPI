@@ -188,6 +188,15 @@ class SwitchAPI {
 
 
 	/**
+	*	Get switch's system status (model, SN, firmware version, ...).
+	*	@return array Return SystemInfoStats object.
+	*/
+	public function getSystemStatus() : stdClass {
+		return $this->curlRequest('GET', '/system/status');
+	}
+
+
+	/**
 	*	VLAN MANAGEMENT
 	*/
 
