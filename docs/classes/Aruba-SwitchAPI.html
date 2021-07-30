@@ -262,6 +262,13 @@
 <dd>Retrieve ARP table (capped to 1K entries right now).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Aruba-SwitchAPI.html#method_getBanner">getBanner()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Get switch&#039;s banners.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Aruba-SwitchAPI.html#method_getMacAddressInfo">getMacAddressInfo()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -414,6 +421,13 @@
                         &nbsp;: bool    </span>
 </dt>
 <dd>Disable a port 5sec and re-enable it. Be careful when disabling links between switchs or firewalls .</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Aruba-SwitchAPI.html#method_setBanner">setBanner()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Set switch&#039;s banners.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Aruba-SwitchAPI.html#method_setTVlanPort">setTVlanPort()</a>
@@ -675,7 +689,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 </aside>
 
         <p class="phpdocumentor-summary">Constructor takes care of checking and registering switch&#039;s data and login to the API</p>
@@ -721,7 +735,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1098</span>
+    <span class="phpdocumentor-element-found-in__line">1141</span>
 </aside>
 
         <p class="phpdocumentor-summary">Destructor takes care of logout</p>
@@ -755,7 +769,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">158</span>
+    <span class="phpdocumentor-element-found-in__line">168</span>
 </aside>
 
         <p class="phpdocumentor-summary">Turn on or off the locator LED. If no duration is set, default to 30 minutes.</p>
@@ -811,7 +825,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">135</span>
 </aside>
 
         <p class="phpdocumentor-summary">Execute a CLI command.</p>
@@ -858,7 +872,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">400</span>
+    <span class="phpdocumentor-element-found-in__line">443</span>
 </aside>
 
         <p class="phpdocumentor-summary">Create a VLAN on the switch.</p>
@@ -914,7 +928,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">468</span>
+    <span class="phpdocumentor-element-found-in__line">511</span>
 </aside>
 
         <p class="phpdocumentor-summary">Delete a VLAN on the switch.</p>
@@ -961,7 +975,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">902</span>
+    <span class="phpdocumentor-element-found-in__line">945</span>
 </aside>
 
         <p class="phpdocumentor-summary">Disable POE on a port.</p>
@@ -1008,7 +1022,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">706</span>
+    <span class="phpdocumentor-element-found-in__line">749</span>
 </aside>
 
         <p class="phpdocumentor-summary">Disable a port.</p>
@@ -1055,7 +1069,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">879</span>
+    <span class="phpdocumentor-element-found-in__line">922</span>
 </aside>
 
         <p class="phpdocumentor-summary">Enable POE on a port.</p>
@@ -1102,7 +1116,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">680</span>
+    <span class="phpdocumentor-element-found-in__line">723</span>
 </aside>
 
         <p class="phpdocumentor-summary">Enable a port.</p>
@@ -1149,7 +1163,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1012</span>
+    <span class="phpdocumentor-element-found-in__line">1055</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve an ARP table entry from an IP.</p>
@@ -1196,7 +1210,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1040</span>
+    <span class="phpdocumentor-element-found-in__line">1083</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve an ARP table entry from a MAC address.</p>
@@ -1243,7 +1257,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1068</span>
+    <span class="phpdocumentor-element-found-in__line">1111</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve an ARP table entry from a VLAN.</p>
@@ -1290,7 +1304,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">992</span>
+    <span class="phpdocumentor-element-found-in__line">1035</span>
 </aside>
 
         <p class="phpdocumentor-summary">Retrieve ARP table (capped to 1K entries right now).</p>
@@ -1318,6 +1332,41 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getBanner">
+        getBanner()
+        <a href="classes/Aruba-SwitchAPI.html#method_getBanner" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">265</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Get switch&#039;s banners.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getBanner</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>Returns a Banner object containing motd banner, exec banner and last login enable parameter.</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getMacAddressInfo">
         getMacAddressInfo()
         <a href="classes/Aruba-SwitchAPI.html#method_getMacAddressInfo" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1325,7 +1374,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">780</span>
+    <span class="phpdocumentor-element-found-in__line">823</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get infos about a MAC address.</p>
@@ -1372,7 +1421,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">794</span>
+    <span class="phpdocumentor-element-found-in__line">837</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get MAC table of the switch.</p>
@@ -1407,7 +1456,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">812</span>
+    <span class="phpdocumentor-element-found-in__line">855</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get MAC table of a port.</p>
@@ -1454,7 +1503,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">841</span>
+    <span class="phpdocumentor-element-found-in__line">884</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get all ports POE status.</p>
@@ -1496,7 +1545,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">636</span>
+    <span class="phpdocumentor-element-found-in__line">679</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get all ports status.</p>
@@ -1531,7 +1580,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">146</span>
+    <span class="phpdocumentor-element-found-in__line">156</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get runnning configuration.</p>
@@ -1566,7 +1615,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">240</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get switch&#039;s system status (firmware version, base address MAC, ...). Works only for stacked switchs.</p>
@@ -1601,7 +1650,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">239</span>
+    <span class="phpdocumentor-element-found-in__line">249</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get switch&#039;s system status (model, SN, ...). Works only for stacked switchs.</p>
@@ -1636,7 +1685,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">221</span>
+    <span class="phpdocumentor-element-found-in__line">231</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get switch&#039;s system status (model, SN, firmware version, ...). Works only for standalone switchs.</p>
@@ -1671,7 +1720,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">331</span>
+    <span class="phpdocumentor-element-found-in__line">374</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the tagged vlan for one port.</p>
@@ -1718,7 +1767,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">308</span>
+    <span class="phpdocumentor-element-found-in__line">351</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get the untagged vlan for one port.</p>
@@ -1765,7 +1814,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">353</span>
+    <span class="phpdocumentor-element-found-in__line">396</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get list of ports for one vlan.</p>
@@ -1812,7 +1861,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">376</span>
+    <span class="phpdocumentor-element-found-in__line">419</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get all VLANs on the switch.</p>
@@ -1847,7 +1896,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">284</span>
+    <span class="phpdocumentor-element-found-in__line">327</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get list of vlans affected to one port.</p>
@@ -1894,7 +1943,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">303</span>
 </aside>
 
         <p class="phpdocumentor-summary">Get list of vlans/ports association.</p>
@@ -1929,7 +1978,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">656</span>
+    <span class="phpdocumentor-element-found-in__line">699</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a port is enabled.</p>
@@ -1976,7 +2025,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">756</span>
+    <span class="phpdocumentor-element-found-in__line">799</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a port is up.</p>
@@ -2023,7 +2072,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">194</span>
+    <span class="phpdocumentor-element-found-in__line">204</span>
 </aside>
 
         <p class="phpdocumentor-summary">Is the switch a stacked switches ?</p>
@@ -2058,7 +2107,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">955</span>
+    <span class="phpdocumentor-element-found-in__line">998</span>
 </aside>
 
         <p class="phpdocumentor-summary">Ping an IP or a hostname.</p>
@@ -2114,7 +2163,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">868</span>
+    <span class="phpdocumentor-element-found-in__line">911</span>
 </aside>
 
         <p class="phpdocumentor-summary">Check if a port is POE enabled.</p>
@@ -2168,7 +2217,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">925</span>
+    <span class="phpdocumentor-element-found-in__line">968</span>
 </aside>
 
         <p class="phpdocumentor-summary">Restart POE on a port.</p>
@@ -2215,7 +2264,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">732</span>
+    <span class="phpdocumentor-element-found-in__line">775</span>
 </aside>
 
         <p class="phpdocumentor-summary">Disable a port 5sec and re-enable it. Be careful when disabling links between switchs or firewalls .</p>
@@ -2256,6 +2305,71 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_setBanner">
+        setBanner()
+        <a href="classes/Aruba-SwitchAPI.html#method_setBanner" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">277</span>
+</aside>
+
+        <p class="phpdocumentor-summary">Set switch&#039;s banners.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setBanner</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$motd</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$exec</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">NULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lastLogin</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">TRUE</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$motd</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The new wanted motd banner. NULL to leave it the same, empty string to remove it.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$exec</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">NULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The new wanted exec banner. NULL to leave it the same, empty string to remove it.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$lastLogin</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">TRUE</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Display last login information ?</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>Returns a Banner object containing the newly set motd banner, exec banner and last login enable parameter.</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_setTVlanPort">
         setTVlanPort()
         <a href="classes/Aruba-SwitchAPI.html#method_setTVlanPort" class="headerlink"><i class="fas fa-link"></i></a>
@@ -2263,7 +2377,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">552</span>
+    <span class="phpdocumentor-element-found-in__line">595</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set tagged VLAN(s) on port.</p>
@@ -2320,7 +2434,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">495</span>
+    <span class="phpdocumentor-element-found-in__line">538</span>
 </aside>
 
         <p class="phpdocumentor-summary">Set untagged VLAN on port.</p>
@@ -2376,7 +2490,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">438</span>
+    <span class="phpdocumentor-element-found-in__line">481</span>
 </aside>
 
         <p class="phpdocumentor-summary">Update a VLAN on the switch.</p>
@@ -2432,7 +2546,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">47</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 </aside>
 
         <p class="phpdocumentor-summary">Method to request the switch&#039;s API</p>
@@ -2504,7 +2618,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">103</span>
+    <span class="phpdocumentor-element-found-in__line">108</span>
 </aside>
 
         <p class="phpdocumentor-summary">Login in the switch.</p>
@@ -2539,7 +2653,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Aruba/SwitchAPI.php"><a href="files/src-aruba-switchapi.html"><abbr title="src/Aruba/SwitchAPI.php">SwitchAPI.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">1089</span>
+    <span class="phpdocumentor-element-found-in__line">1132</span>
 </aside>
 
         <p class="phpdocumentor-summary">Logout</p>

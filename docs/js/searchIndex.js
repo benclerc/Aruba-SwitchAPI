@@ -156,6 +156,16 @@ Search.appendIndex(
             "summary": "Get\u0020switch\u0027s\u0020system\u0020status\u0020\u0028model,\u0020SN,\u0020...\u0029.\u0020Works\u0020only\u0020for\u0020stacked\u0020switchs.",
             "url": "classes/Aruba-SwitchAPI.html#method_getStackMemberSystemStatus"
         },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetBanner\u0028\u0029",
+            "name": "getBanner",
+            "summary": "Get\u0020switch\u0027s\u0020banners.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getBanner"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AsetBanner\u0028\u0029",
+            "name": "setBanner",
+            "summary": "Set\u0020switch\u0027s\u0020banners.",
+            "url": "classes/Aruba-SwitchAPI.html#method_setBanner"
+        },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetVlansPorts\u0028\u0029",
             "name": "getVlansPorts",
             "summary": "Get\u0020list\u0020of\u0020vlans\/ports\u0020association.",

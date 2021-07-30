@@ -27,6 +27,11 @@ class SwitchAPI {
 
 
 	/**
+	*	MISC
+	*/
+
+
+	/**
 	*	Constructor takes care of checking and registering switch's data and login to the API
 	*	@param Config $config Object containing all necessary configuration.
 	*/
@@ -115,6 +120,11 @@ class SwitchAPI {
 			throw new Exception('login() : Login failed');
 		}
 	}
+
+
+	/**
+	*	SYSTEM MANAGEMENT
+	*/
 
 
 	/**
@@ -245,6 +255,39 @@ class SwitchAPI {
 		} else {
 			return FALSE;
 		}
+	}
+
+
+	/**
+	*	Get switch's banners.
+	*	@return array Returns a Banner object containing motd banner, exec banner and last login enable parameter.
+	*/
+	public function getBanner() : stdClass {
+		return $this->curlRequest('GET', '/banner');
+	}
+
+
+	/**
+	*	Set switch's banners.
+	*	@param string $motd The new wanted motd banner. NULL to leave it the same, empty string to remove it.
+	*	@param string $exec The new wanted exec banner. NULL to leave it the same, empty string to remove it.
+	*	@param bool $lastLogin Display last login information ?
+	*	@return array Returns a Banner object containing the newly set motd banner, exec banner and last login enable parameter.
+	*/
+	public function setBanner(string $motd = NULL, string $exec = NULL, bool $lastLogin = TRUE) : stdClass {
+		// Create and fill data object
+		$data = new stdClass();
+		// 
+		if (isset($motd)) {
+			$data->motd_base64_encoded = base64_encode($motd);
+		}
+		if (isset($exec)) {
+			$data->exec_base64_encoded = base64_encode($exec);
+		}
+		$data->is_last_login_enabled = $lastLogin;
+
+		// Execute request
+		return $this->curlRequest('PUT', '/banner', json_encode($data));
 	}
 
 
