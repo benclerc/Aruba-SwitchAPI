@@ -26,6 +26,11 @@ Search.appendIndex(
             "summary": "Getter\u0020for\u0020API\u0020autorized\u0020user\u0027s\u0020password.",
             "url": "classes/Aruba-Config.html#method_getPassword"
         },                {
+            "fqsen": "\\Aruba\\Config\u003A\u003AsetPassword\u0028\u0029",
+            "name": "setPassword",
+            "summary": "Setter\u0020for\u0020API\u0020autorized\u0020user\u0027s\u0020password.",
+            "url": "classes/Aruba-Config.html#method_setPassword"
+        },                {
             "fqsen": "\\Aruba\\Config\u003A\u003AsetTimeout\u0028\u0029",
             "name": "setTimeout",
             "summary": "Setter\u0020for\u0020curl\u0027s\u0020timeout\u0020in\u0020ms.",
@@ -165,6 +170,21 @@ Search.appendIndex(
             "name": "setBanner",
             "summary": "Set\u0020switch\u0027s\u0020banners.",
             "url": "classes/Aruba-SwitchAPI.html#method_setBanner"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetManagementUsers\u0028\u0029",
+            "name": "getManagementUsers",
+            "summary": "Get\u0020all\u0020device\u0020management\u0020users.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getManagementUsers"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetManagementUser\u0028\u0029",
+            "name": "getManagementUser",
+            "summary": "Get\u0020one\u0020device\u0020management\u0020user.",
+            "url": "classes/Aruba-SwitchAPI.html#method_getManagementUser"
+        },                {
+            "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AupdateManagementUserPassword\u0028\u0029",
+            "name": "updateManagementUserPassword",
+            "summary": "Change\u0020the\u0020password\u0020of\u0020a\u0020management\u0020user.",
+            "url": "classes/Aruba-SwitchAPI.html#method_updateManagementUserPassword"
         },                {
             "fqsen": "\\Aruba\\SwitchAPI\u003A\u003AgetVlansPorts\u0028\u0029",
             "name": "getVlansPorts",

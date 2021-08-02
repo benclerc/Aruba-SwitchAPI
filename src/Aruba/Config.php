@@ -5,7 +5,7 @@
 *	@author Benjamin Clerc <contact@benjamin-clerc.com>
 *	@copyright Copyright (c) 2020, Benjamin Clerc.
 *	@license MIT
-*	@link https://github.com/benclerc/ArubaOSAPI
+*	@link https://github.com/benclerc/Aruba-SwitchAPI
 */
 
 namespace Aruba;
@@ -29,7 +29,7 @@ class Config {
 	*	@param string $hostname switch's FQDN or IP address
 	*	@param string $username API autorized user
 	*	@param string $password API autorized user's password
-	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
 	*/
 	public function __construct(string $hostname, string $username, string $password) {
 		// Check and register firewall's hostname
@@ -72,9 +72,20 @@ class Config {
 
 
 	/**
+	*	Setter for API autorized user's password.
+	*	@param string $password Password.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
+	*/
+	public function setPassword(string $password) {
+		$this->password = $password;
+		return $this;
+	}
+
+
+	/**
 	*	Setter for curl's timeout in ms.
 	*	@param int $timeout Curl's timeout in ms.
-	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
 	*/
 	public function setTimeout(int $timeout) {
 		$this->timeout = $timeout;
@@ -94,7 +105,7 @@ class Config {
 	/**
 	*	Setter for curl's option to verify SSL peer.
 	*	@param int $verifySSLPeer Curl's option to verify SSL peer.
-	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
 	*/
 	public function setSSLVerifyPeer(bool $verifySSLPeer) {
 		$this->SSLVerifyPeer = $verifySSLPeer;
@@ -114,7 +125,7 @@ class Config {
 	/**
 	*	Setter for curl's option to verify SSL peer.
 	*	@param bool $verifySSLHost Curl's option to verify SSL host.
-	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
 	*/
 	public function setSSLVerifyHost(bool $verifySSLHost) {
 		$this->SSLVerifyHost = ($verifySSLHost) ? 2 : 0;
@@ -134,7 +145,7 @@ class Config {
 	/**
 	*	Setter for API version to use.
 	*	@param string $version API version to use e.g. 'v7'.
-	*	@return Config Config object to be passed on a new instance of SwitchOSAPI object.
+	*	@return Config Config object to be passed on a new instance of SwitchAPI object.
 	*/
 	public function setAPIVersion(string $version) {
 		$this->apiVersion = $version;

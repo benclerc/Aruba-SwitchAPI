@@ -292,6 +292,102 @@ class SwitchAPI {
 
 
 	/**
+	*	AUTHENTICATION MANAGEMENT
+	*/
+
+
+	/**
+	*	Get all device management users.
+	*	@return array Returns an array of DeviceManagementUser objects containing username, group, password type, password, aging period and minimum password length on success or FALSE on failure.
+	*/
+	public function getManagementUsers() {
+		// Check if the information is not already stored in cache, if it is return it else request it
+		if (isset($this->cache['getManagementUsers'])) {
+			return $this->cache['getManagementUsers'];
+		} else {
+			// Send request
+			$res = $this->curlRequest('GET', '/management-user');
+			// Check the return values are correct, if so save in cache and return else return FALSE
+			if ($res->collection_result->total_elements_count > 0 && !empty($res->device_management_user_element)) {
+				$this->cache['getManagementUsers'] = $res->device_management_user_element;
+				return $res->device_management_user_element;
+			} else {
+				return FALSE;
+			}
+		}
+	}
+
+
+	/**
+	*	Get one device management user.
+	*	@param string $name user's name.
+	*	@return array Returns DeviceManagementUser object containing username, group, password type, password, aging period and minimum password length on success or FALSE on failure.
+	*/
+	public function getManagementUser(string $name) {
+		// Request info
+		$res = $this->getManagementUsers();
+
+		// If result is valid, iterate through it and keep only the wanted user
+		if ($res !== FALSE) {
+			foreach ($res as $key => $value) {
+				if ($value->name == $name) {
+					$return = $value;
+					break;
+				}
+			}
+			// If we did not find the user then return FALSE
+			if (!isset($return)) { $return = FALSE; }
+		} else {
+			$return = FALSE;
+		}
+		return $return;
+	}
+
+
+	/**
+	*	Change the password of a management user.
+	*	@param string $name User's name.
+	*	@param string $password user's password.
+	*	@return array Returns TRUE on success or FALSE on failure.
+	*/
+	public function updateManagementUserPassword(string $name, string $password) : bool {
+		// Retrieve user's information
+		$user = $this->getManagementUser($name);
+		if (!empty($user)) {
+			// Create and fill data object
+			$data = new stdClass();
+			$data->name = $name;
+			$data->password_type = 'PET_PLAIN_TEXT';
+			$data->password = $password;
+
+			// Execute request
+			$res = $this->curlRequest('PUT', '/management-user/'.$user->type, json_encode($data));
+			// Check if returned value is what we were waiting for and continue
+			if ($res->name == $name) {
+				// If set, reset the management user cache
+				unset($this->cache['getManagementUsers']);
+
+				// If the modified user is the user currently logged in, modify the config object and re-login onto the switch
+				if ($name == $this->config->getUsername()) {
+					$this->config->setPassword($password);
+					if ($this->login() !== TRUE) {
+						throw new Exception('updateManagementUserPassword() : Unable to log back in after updated the password.');
+					} else {
+						return TRUE;
+					}
+				} else {
+					return TRUE;
+				}
+			} else {
+				throw new Exception('updateManagementUserPassword() : Unable to update the password.');
+			}
+		} else {
+			throw new Exception('updateManagementUserPassword() : The user does not exist.');
+		}
+	}
+
+
+	/**
 	*	VLAN MANAGEMENT
 	*/
 
