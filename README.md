@@ -138,36 +138,4 @@ try {
 
 #### Available methods
 
-* [blinkLedLocator()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_blinkLedLocator) : Turn on or off the locator LED. If no duration is set, default to 30 minutes.
-* [cli()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_cli) : Execute a CLI command.
-* [createVlan()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_createVlan) : Create a VLAN on the switch.
-* [deleteVlan()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_deleteVlan) : Delete a VLAN on the switch.
-* [disablePoePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_disablePoePort) : Disable POE on a port.
-* [disablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_disablePort) : Disable a port.
-* [enablePoePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_enablePoePort) : Enable POE on a port.
-* [enablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_enablePort) : Enable a port.
-* [getArpEntryFromIP()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromIP) : Retrieve an ARP table entry from an IP.
-* [getArpEntryFromMAC()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromMAC) : Retrieve an ARP table entry from a MAC address.
-* [getArpEntryFromVLAN()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpEntryFromVLAN) : Retrieve an ARP table entry from a VLAN.
-* [getArpTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getArpTable) : Retrieve ARP table (capped to 1K entries right now).
-* [getMacAddressInfo()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacAddressInfo) : Get infos about a MAC address.
-* [getMacTable()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacTable) : Get MAC table of the switch.
-* [getMacTablePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getMacTablePort) : Get MAC table of a port.
-* [getPortsPOEStatus()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getPortsPOEStatus) : Get all ports POE status.
-* [getPortsStatus()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getPortsStatus) : Get all ports status.
-* [getRunningConfig()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getRunningConfig) : Get runnning configuration.
-* [getTVlanPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getTVlanPort) : Get the tagged vlan for one port.
-* [getUVlanPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getUVlanPort) : Get the untagged vlan for one port.
-* [getVlanPorts()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getVlanPorts) : Get list of ports for one vlan.
-* [getVlans()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getVlans) : Get all VLANs on the switch.
-* [getVlansPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getVlansPort) : Get list of vlans affected to one port.
-* [getVlansPorts()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_getVlansPorts) : Get list of vlans/ports association.
-* [isPortEnabled()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_isPortEnabled) : Check if a port is enabled.
-* [isPortUp()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_isPortUp) : Check if a port is up.
-* [ping()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_ping) : Ping an IP or a hostname.
-* [portPoeStatus()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_portPoeStatus) : Check if a port is POE enabled.
-* [restartPoePort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_restartPoePort) : Restart POE on a port.
-* [restartPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_restartPort) : Disable a port 5sec and re-enable it.
-* [setTVlanPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_setTVlanPort) : Set tagged VLAN(s) on port.
-* [setUVlanPort()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_setUVlanPort) : Set untagged VLAN on port.
-* [updateVlan()](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html#method_updateVlan) : Update a VLAN on the switch.
+You can browse all available methods [here](https://benclerc.github.io/Aruba-SwitchAPI/classes/Aruba-SwitchAPI.html).
